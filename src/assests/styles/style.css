@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e2dec9;
+  padding: 10px;
+  position: relative;
+}
+nav .logo {
+  height: 30px;
+  z-index: 10;
+}
+nav .close, nav .open {
+  z-index: 10;
+  cursor: pointer;
+}
+nav ul {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  background-color: #e2dec9;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  gap: 30px;
+  z-index: 1;
+}
+nav ul li {
+  list-style: none;
+  cursor: pointer;
+}
+
+main .hero {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+main .hero .text {
+  background-color: transparent;
+  color: rgb(162, 0, 255);
+}
+main .hero .text .hero-call-to-action {
+  padding: 20px 10px;
+  background-color: #e2dec9;
+  border-radius: 10px;
+  text-decoration: none;
+  color: black;
+}
+main .hero .images {
+  border: 1px solid red;
+  position: relative;
+  width: 100%;
+}
+main .hero .images img {
+  border-radius: 20px;
+  width: 150px;
+  position: absolute;
+}
+main .hero .images .heroImage1 {
+  transform: rotate(20deg);
+}
+main .hero .images .heroImage2 {
+  margin-left: 50%;
+  transform: rotate(50deg);
+}
+main .hero .images .heroImage3 {
+  top: 150px;
+  left: 100px;
+  transform: rotate(5deg);
+  z-index: -1;
+  animation: rotate__animation 1s ease-in-out;
+}
+
+@media screen and (min-width: 800px) {
+  nav {
+    padding-inline: 100px;
+    font-weight: 500;
+  }
+  nav .logo {
+    height: 40px;
+  }
+  nav ul {
+    position: unset;
+    z-index: 0;
+    height: 0;
+    flex-direction: row;
+    justify-content: end;
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  nav {
+    padding-inline: 200px;
+    font-weight: 500;
+  }
+  nav .logo {
+    height: 40px;
+  }
+  nav ul {
+    position: unset;
+    z-index: 0;
+    height: 0;
+    flex-direction: row;
+    justify-content: end;
+    font-size: 1rem;
+  }
+}
+@keyframes rotate__animation {
+  0% {
+    transform: rotate(40%);
+  }
+  100% {
+    transform: rotate(80%);
+  }
+}/*# sourceMappingURL=style.css.map */
